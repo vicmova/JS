@@ -1,0 +1,81 @@
+<!--generadores=tipo de función que devuelve 
+una serie de valores con un algoritmo definido x el user.
+sintáxis: function* yield devuelve el valor y 
+guarda el estado de la función. El método next() devuelve el 
+valor del objeto. Value indica el valor. Yield sustituye a return.-->
+
+<!DOCTYPE html>
+<html>
+        <head>
+            <title>generadores</title>
+            <script>
+              /*  
+              for(let i of rango(0, 10, 2)){
+
+                        console.log(i);
+                        //devuelve 0, 2, 4, 6, 8
+
+                }
+
+                function* rango(inicio, fin, incremento) {
+
+                    while(inicio<fin){
+                        yield inicio
+                        inicio+=incremento
+                    }
+
+                }
+                */
+               /*
+                //cuadrados 
+                function* cuadrados(){
+                    var n = 1;
+                        while(true) {
+                            var c = n * n;
+                            
+                            n++;
+                            
+                            yield c;
+                        }
+                }
+
+                document.write("Ejemplo generador");
+
+                var gen = cuadrados();
+                
+                console.log(gen);
+                console.log(gen.next().value);
+                console.log(gen.next().value);
+                console.log(gen.next().value);
+                console.log(gen.next().value);
+
+                */
+
+                document.write("Serie de Fibonacci hasta el número 1000.");
+
+                let fibonacci = {
+                    *[Symbol.iterator]() {
+                        let pre = 0, cur = 1
+                            for(;;) {
+                                [pre, cur] = [cur, pre+cur]
+                                yield cur
+                            }
+                    }
+                }
+
+                for(let n of fibonacci) {
+
+                    if(n > 1000) break
+                        console.log(n)
+                }
+
+
+
+            </script>
+        </head>
+        
+            <body>
+
+            </body>
+
+</html>
