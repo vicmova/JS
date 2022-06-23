@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Ejemplo ámbito let y const
+    </title>
+
+    <script type="text/javascript">
+    
+    const y = 12;
+
+    function letTest(){
+
+        if(true) {
+            
+            let x = 23;
+            
+            //console.log("Valor de let x: "+x);
+            console.log("Valor de const y: "+y);
+        
+        }
+    }
+    letTest();
+    //console.log(x);
+    console.log("Valor de const y fuera del ámbito de la función: "+y);
+    
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+
+</html>
