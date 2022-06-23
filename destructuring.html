@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Destructuring
+    </title>
+
+    <script type="text/javascript">
+        /*
+        //Destructuring=método para extraer datos de un objeto{} o de un vector[] 
+        //de forma simplificada
+
+       let ejemplo = ['a', 'b', 'c'];
+       let [letra_a, letra_b, letra_c] = ejemplo;
+       
+       console.log(`Contenido de letra_a: ${letra_a}`);
+       
+       console.log(`Contenido de letra_c: ${letra_c}`);
+       */
+        /*
+       let modulo = {
+
+            cuadrado(ion) {console.log(ion*ion);},
+            circulo(radio) {console.log(radio*Math.PI)},
+            texto(text){console.log(text);},
+       };
+
+       let {cuadrado, circulo, texto} = modulo;
+
+       cuadrado(5);
+       texto('Hola');
+       circulo(10);
+       */
+
+       //ejemplo objetos
+
+       let user1 = {nombre:'Carlos', apellido:'Abad', id:'001'};
+       let user2 = {nombre:'Petra', apellido:'Salinas', id:'002'};
+       let user3 = {nombre:'Bernat', apellido:'Llull', id:'003'};
+
+       function nombreUser({nombre, apellido, id}){
+
+            console.log(`Datos de los usuarios: ${nombre} ${apellido} ${id}`);
+
+       }
+
+       nombreUser(user1)
+       nombreUser(user2)
+       nombreUser(user3)
+    
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+
+</html>
